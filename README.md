@@ -1,6 +1,4 @@
-# Lisans--Algoritma-Tasarimi
-  
-## Bilgisayar Mühendisliği Lisans 4. Sınıf Dersi    
+  ## Bilgisayar Mühendisliği Lisans 4. Sınıf Dersi    
    
 
 ## 1- Kd Tree Nearest Neighbor Search Algorithm
