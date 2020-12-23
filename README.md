@@ -38,13 +38,13 @@ K - En yakın komşu araması : Bu yöntem  , sorgu noktasına en yakın olan k 
 ![3](https://user-images.githubusercontent.com/56633000/102958522-221a8280-44ee-11eb-923f-9d230393df94.png)  
  
 
-Bir yaprağa ulaşana kadar K-d ağacında x'i arayın.
-• Mevcut-en iyi yaprak noktasını düşünün.
-• Arama yolu ve her bir düğüm boyunca: 
-•	Mevcut nokta daha iyiyse, mevcut-en iyiyi yeniden tanımlayın
-•	En iyisi keşfedilmemiş çocukta olabilirse keşfedilmemiş çocuğu tekrarlayın.
+Bir yaprağa ulaşana kadar K-d ağacında x'i arayın.  
+• Mevcut-en iyi yaprak noktasını düşünün.  
+• Arama yolu ve her bir düğüm boyunca:   
+•	Mevcut nokta daha iyiyse, mevcut-en iyiyi yeniden tanımlayın  
+•	En iyisi keşfedilmemiş çocukta olabilirse keşfedilmemiş çocuğu tekrarlayın.  
 
-Kd-Tree, BSP Tree’nin özelleştirilmiş bir halidir. Bu yapıda uzay, koordinat eksenlerine paralel bir dikdörtgen prizma olarak düşünülür. Uzay, belirli bir maksimum üçgen sayısına ya da maksimum derinliğe ulaşana kadar yine dikdörtgen prizma şeklindeki alt uzaylara bölünür. Kd-Tree’de uzay, bir kenarının orta noktasından ikiye bölünmek zorunda değildir. Yani bölünen alt uzaylar, geometrik olarak birbirlerine eşit değildir. Bunun yerine Kd-Tree’de uzay alt uzaylara, toplam maliyeti en aza indirecek şekilde bölünür. Bu amaçla çeşitli sezgisel yöntemler geliştirilmiştir.
+Kd-Tree, BSP Tree’nin özelleştirilmiş bir halidir. Bu yapıda uzay, koordinat eksenlerine paralel bir dikdörtgen prizma olarak düşünülür. Uzay, belirli bir maksimum üçgen sayısına ya da maksimum derinliğe ulaşana kadar yine dikdörtgen prizma şeklindeki alt uzaylara bölünür. Kd-Tree’de uzay, bir kenarının orta noktasından ikiye bölünmek zorunda değildir. Yani bölünen alt uzaylar, geometrik olarak birbirlerine eşit değildir. Bunun yerine Kd-Tree’de uzay alt uzaylara, toplam maliyeti en aza indirecek şekilde bölünür. Bu amaçla çeşitli sezgisel yöntemler geliştirilmiştir.  
 
 ### Kd-Tree’nin Oluşturulması
 Kd-Tree’nin kullanılması için, öncelikle üçgenlerden oluşan cisim için bir Kd-Tree’nin oluşturulması gerekmektedir. KdTree’nin oluşturulması, ilk bakıldığında ciddi bir hesaplama yükü getirse de, yapı bir kere oluşturulup cismin bütün açılardan görüntüsünü elde etmekte kullanılabileceği ve bu işlemlerde oldukça yüksek bir başarım sağlayacağı için bu hesaplama yükü, göz ardı edilebilecek düzeydedir. Daha önce bahsedildiği gibi, Kd-Tree oluşturulurken her aşamada uzay, iki alt uzaya bölünür. Uzayın bölüneceği düzlemi belirlemek için çeşitli sezgisel yöntemler kullanılır. Bu yöntemlerin en çok kullanılanları, “Uzaysal Medyan Yaklaşımı” ve “Yüzey Alanı Sezgisel Yaklaşımı”dır. Kd-Tree oluşturulması konusunda bir diğer önemli nokta, üçgenlerin bölünen her alt uzayın içinde olup olmadığının hesaplanmasıdır. Bunun için de kutu-üçgen kesişim algoritmaları geliştirilmiştir. Kd-Tree, bu iki ölçüte göre özyinelemeli olarak oluşturulur.
