@@ -68,5 +68,7 @@ Ekleme	    O(logn)    	O(n)
 Silme		    O(logn)	    O(n)  
 Uzay		    O(n)		    O(n)  
 
+  
 
+![4](https://user-images.githubusercontent.com/56633000/102960933-234eae00-44f4-11eb-8bc5-44d4167f84fe.png)  
 
